@@ -1,0 +1,8 @@
+version=1
+id=3273654837
+title=aoqia's zomboid utils
+description=A mod to keep my codebase clean! Useful to developers (mainly me) only!
+description=
+description=GitHub Repository: https://github.com/aoqia194/AoqiaZomboidUtils/
+tags=Build 41
+visibility=public

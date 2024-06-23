@@ -1,0 +1,6 @@
+name=aoqia's zomboid utils
+id=AoqiaZomboidUtils
+description=Contains some utilities for my other mods. Useful to keep a clean codebase.
+poster=poster.png
+versionMin=41.78.16
+modVersion=1.0.0
