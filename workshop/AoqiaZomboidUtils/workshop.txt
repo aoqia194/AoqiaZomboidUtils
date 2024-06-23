@@ -1,0 +1,11 @@
+version=1
+id=3273557278
+title=aoqia's zomboid utils
+description=This mod simply adds support for dynamically changing translations from the Lua side ONLY (no way to do Java sided stuff). It's solely for other developers to use in their own mods.
+
+description=
+Currently, you can only edit translations on the client side Lua as I don't have a sufficient reason (or any at all) to put the code on the server side.
+description=
+description=GitHub Repository: https://github.com/aoqia194/AoqiaDynamicTranslationsAPI/
+tags=Build 41;Framework;Interface;Language/Translation
+visibility=public
