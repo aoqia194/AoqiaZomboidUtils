@@ -6,21 +6,22 @@ local constants = require("AoqiaZomboidUtils/constants")
 
 -- ------------------------------ Module Start ------------------------------ --
 
+--- @class Logger
 local logger = {}
 
 logger.MOD_ID = nil
 
 function logger.debug(...)
     if not logger.MOD_ID then return end
-
     if constants.IS_DEBUG == false then return end
+
     print(string.format("[%s] [DEBUG] %s", logger.MOD_ID, string.format(...)))
 end
 
 function logger.debug_server(...)
     if not logger.MOD_ID then return end
-
     if constants.IS_DEBUG == false then return end
+
     print(string.format("[%s/server] [DEBUG] %s", logger.MOD_ID, string.format(...)))
 end
 
@@ -67,8 +68,18 @@ function logger.error_server(...)
 end
 
 --- @param mod_id string
-function logger.register(mod_id)
-    logger.MOD_ID = mod_id
+function logger:register(mod_id)
+    self.MOD_ID = mod_id
+end
+
+--- @param object Logger|nil
+--- @return Logger instance
+function logger:new(object)
+    object = object or {}
+    setmetatable(object, self)
+    self.__index = self
+
+    return object
 end
 
 return logger
