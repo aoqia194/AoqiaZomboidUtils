@@ -26,10 +26,6 @@ EXCLUDE_PATTERNS = [
     "*.blend1",
     # Photoshop files
     "*.psd",
-    # Lua workshop libs
-    "ItemTweaker_Core.lua",
-    "MF_ISMoodle.lua",
-    "MF_MoodleScale.lua",
 ]
 EXCLUDED_DIRS = [".git", ".vscode", "dist", "scripts", "blender", "workshop"]
 
