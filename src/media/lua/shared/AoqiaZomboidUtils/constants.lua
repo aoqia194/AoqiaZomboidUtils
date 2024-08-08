@@ -6,9 +6,12 @@
 
 local constants = {}
 
-constants.IS_CLIENT = isClient() == true
-constants.IS_DEBUG = getDebug() == true
-constants.IS_SERVER = isServer() == true
+constants.IS_DEBUG = getDebug()
+
+constants.IS_CLIENT = isClient()
+constants.IS_COOP = isClient() and isCoopHost()
+constants.IS_SERVER = isServer()
+constants.IS_SINGLEPLAYER = isClient() == false and isServer() == false
 
 constants.IS_LAST_STAND = getCore():getGameMode() == "LastStand"
 
