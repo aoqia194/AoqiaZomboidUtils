@@ -7,6 +7,6 @@
 local mod_constants = {}
 
 mod_constants.MOD_ID = "AoqiaZomboidUtils"
-mod_constants.MOD_VERSION = "1.1.3"
+mod_constants.MOD_VERSION = "1.2.0"
 
 return mod_constants
