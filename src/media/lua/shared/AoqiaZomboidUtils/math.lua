@@ -6,13 +6,14 @@
 
 -- ------------------------------ Module Start ------------------------------ --
 
-local math = {}
+local aoqia_math = {}
 
---- @param val integer
---- @param min integer
---- @param max integer
---- @return integer
-function math.clamp(val, min, max)
+--- @param val integer | int
+--- @param min integer | int
+--- @param max integer | int
+--- @return integer | int
+function aoqia_math.clamp(val, min, max)
+    -- NOTE: Keep this here to avoid function call overhead.
     if val < min then
         return min
     elseif val > max then
@@ -22,4 +23,4 @@ function math.clamp(val, min, max)
     return val
 end
 
-return math
+return aoqia_math
