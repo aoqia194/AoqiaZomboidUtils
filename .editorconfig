@@ -101,13 +101,14 @@ align_call_args = false
 
 align_function_params = false
 
+# Looks nice as fudge but is really bad for horizontal space optimisation.
 align_continuous_assign_statement = false
 
 align_continuous_rect_table_field = true
 
 align_continuous_line_space = 4
 
-align_if_branch = false
+align_if_branch = true
 
 # option none / always / contain_curly/
 align_array_table = true
@@ -116,7 +117,7 @@ align_continuous_similar_call_args = false
 
 align_continuous_inline_comment = true
 # option none / always / only_call_stmt
-align_chain_expr = none
+align_chain_expr = false
 
 # [indent]
 
@@ -156,7 +157,7 @@ line_space_after_comment = max(2)
 
 line_space_around_block = max(2)
 # [line break]
-break_all_list_when_line_exceed = false
+break_all_list_when_line_exceed = true
 
 auto_collapse_lines = true
 
