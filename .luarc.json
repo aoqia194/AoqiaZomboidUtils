@@ -4,9 +4,7 @@
         "requireSeparator": "/"
     },
     "diagnostics": {
-        "globals": [
-            "MF"
-        ],
+        "globals": [],
         "ignoredFiles": "Opened",
         "libraryFiles": "Opened",
         "neededFileStatus": {
@@ -73,7 +71,7 @@
             "unreachable-code": "Warning",
             "unused-function": "Warning",
             "unused-label": "Error!", // Labels cannot exist in Lua 5.1
-            "unused-local": "Warning",
+            "unused-local": "Hint",
             "unused-vararg": "Warning"
         }
     },
@@ -129,10 +127,13 @@
     },
     "workspace": {
         "checkThirdParty": false,
+        "ignoreDir": [
+            ".vscode",
+            "libs/"
+        ],
         "library": [
             "C:/Users/aoqia/AppData/Roaming/Code/User/globalStorage/sumneko.lua/addonManager/addons/umbrella/module/library",
             "C:/Program Files (x86)/Steam/steamapps/common/ProjectZomboid/media/lua",
-            "C:/github/AoqiaZomboidUtils/src/media/lua/shared"
         ],
         "maxPreload": 10000,
         "preloadFileSize": 1000
