@@ -133,7 +133,7 @@
         ],
         "library": [
             "C:/Users/aoqia/AppData/Roaming/Code/User/globalStorage/sumneko.lua/addonManager/addons/umbrella/module/library",
-            "C:/Program Files (x86)/Steam/steamapps/common/ProjectZomboid/media/lua",
+            "C:/Program Files (x86)/Steam/steamapps/common/ProjectZomboid/media/lua"
         ],
         "maxPreload": 10000,
         "preloadFileSize": 1000
