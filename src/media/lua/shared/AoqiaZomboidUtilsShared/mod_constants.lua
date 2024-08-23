@@ -9,7 +9,7 @@ local logger = require("AoqiaZomboidUtilsShared/logger")
 local mod_constants = {}
 
 mod_constants.MOD_ID = "AoqiaZomboidUtils"
-mod_constants.MOD_VERSION = "1.3.1"
+mod_constants.MOD_VERSION = "1.4.0"
 
 mod_constants.LOGGER = logger:new(mod_constants.MOD_ID)
 
