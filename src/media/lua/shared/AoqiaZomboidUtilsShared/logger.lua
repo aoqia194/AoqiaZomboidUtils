@@ -3,7 +3,7 @@
 -- -------------------------------------------------------------------------- --
 
 -- AoqiaZomboidUtils requires.
-local constants = require("AoqiaZomboidUtils/constants")
+local constants = require("AoqiaZomboidUtilsShared/constants")
 
 -- ------------------------------ Module Start ------------------------------ --
 
