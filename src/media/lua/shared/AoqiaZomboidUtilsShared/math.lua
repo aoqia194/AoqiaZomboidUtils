@@ -13,7 +13,6 @@ local aoqia_math = {}
 --- @param max integer | int
 --- @return integer | int
 function aoqia_math.clamp(val, min, max)
-    -- NOTE: Keep this here to avoid function call overhead.
     if val < min then
         return min
     elseif val > max then
