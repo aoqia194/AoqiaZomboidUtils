@@ -6,7 +6,7 @@
     "diagnostics": {
         "globals": [],
         "ignoredFiles": "Opened",
-        "libraryFiles": "Opened",
+        "libraryFiles": "Disable",
         "neededFileStatus": {
             "codestyle-check": "Any"
         },
@@ -102,11 +102,14 @@
             "client/?.lua",
             "server/?.lua"
         ],
-        "version": "Lua 5.1"
+        "version": "Lua 5.1" // PZ uses a similar version to 5.1
     },
     "semantic": {
         "annotation": true,
         "enable": true,
+        // VSCode already does keyword highlighting but I
+        // turn this on and off every so often because
+        // sometimes vscode bugs out
         "keyword": false,
         "variable": true
     },
@@ -133,9 +136,11 @@
         ],
         "library": [
             "C:/Users/aoqia/AppData/Roaming/Code/User/globalStorage/sumneko.lua/addonManager/addons/umbrella/module/library",
-            "C:/Program Files (x86)/Steam/steamapps/common/ProjectZomboid/media/lua"
+            "C:/Program Files (x86)/Steam/steamapps/common/ProjectZomboid/media/lua",
+            "../AoqiaZomboidUtils/src/media/lua/shared",
+            "libs/"
         ],
         "maxPreload": 10000,
-        "preloadFileSize": 1000
+        "preloadFileSize": 10000
     }
 }

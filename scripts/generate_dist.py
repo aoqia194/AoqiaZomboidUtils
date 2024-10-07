@@ -1,4 +1,14 @@
-""" This is not a module. """
+"""
+This is not a module.
+
+
+It is a script that I use across all my mods to generate distribution files.
+The purpose is to exclude certain files and directories directly from the repository.
+This reduces file size dramatically rather than including all of the files.
+
+This `scripts` folder is symlinked to all of my mods locally.
+This is why it appears that none of my mods have the scripts except this one.
+"""
 
 import os
 import pathlib
@@ -78,7 +88,7 @@ def main():
                     print(f"Copying file {src_file} to {dest_file}")
                     if not dest_file.parent.exists():
                         dest_file.parent.mkdir(parents=True)
-                    
+
                     shutil.copy2(src_file, dest_file)
 
     # Copy all workshop files to workshop folder
