@@ -18,7 +18,7 @@ function logger:debug(str, ...)
     if not self.MOD_ID then return end
     if constants.IS_DEBUG == false then return end
 
-    print(("[%s] [DEBUG] %s"):format(self.MOD_ID, str:format(...)))
+    print(("[DEBUG] [%s] %s"):format(self.MOD_ID, str:format(...)))
 end
 
 --- @param str string The string that will be formatted.
@@ -27,7 +27,7 @@ function logger:debug_shared(str, ...)
     if not self.MOD_ID then return end
     if constants.IS_DEBUG == false then return end
 
-    print(("[%s/shared] [DEBUG] %s"):format(self.MOD_ID, str:format(...)))
+    print(("[DEBUG] [%s/shared] %s"):format(self.MOD_ID, str:format(...)))
 end
 
 --- @param str string The string that will be formatted.
@@ -36,7 +36,7 @@ function logger:debug_server(str, ...)
     if not self.MOD_ID then return end
     if constants.IS_DEBUG == false then return end
 
-    print(("[%s/server] [DEBUG] %s"):format(self.MOD_ID, str:format(...)))
+    print(("[DEBUG] [%s/server] %s"):format(self.MOD_ID, str:format(...)))
 end
 
 --- @param str string The string that will be formatted.
@@ -44,7 +44,7 @@ end
 function logger:info(str, ...)
     if not self.MOD_ID then return end
 
-    print(("[%s] [INFO] %s"):format(self.MOD_ID, str:format(...)))
+    print(("[INFO] [%s] %s"):format(self.MOD_ID, str:format(...)))
 end
 
 --- @param str string The string that will be formatted.
@@ -52,7 +52,7 @@ end
 function logger:info_shared(str, ...)
     if not self.MOD_ID then return end
 
-    print(("[%s/shared] [INFO] %s"):format(self.MOD_ID, str:format(...)))
+    print(("[INFO] [%s/shared] %s"):format(self.MOD_ID, str:format(...)))
 end
 
 --- @param str string The string that will be formatted.
@@ -60,7 +60,7 @@ end
 function logger:info_server(str, ...)
     if not self.MOD_ID then return end
 
-    print(("[%s/server] [INFO] %s"):format(self.MOD_ID, str:format(...)))
+    print(("[INFO] [%s/server] %s"):format(self.MOD_ID, str:format(...)))
 end
 
 --- @param str string The string that will be formatted.
@@ -68,7 +68,7 @@ end
 function logger:warn(str, ...)
     if not self.MOD_ID then return end
 
-    print(("[%s] [WARN] %s"):format(self.MOD_ID, str:format(...)))
+    print(("[WARN] [%s] %s"):format(self.MOD_ID, str:format(...)))
 end
 
 --- @param str string The string that will be formatted.
@@ -76,7 +76,7 @@ end
 function logger:warn_shared(str, ...)
     if not self.MOD_ID then return end
 
-    print(("[%s/shared] [WARN] %s"):format(self.MOD_ID, str:format(...)))
+    print(("[WARN] [%s/shared] %s"):format(self.MOD_ID, str:format(...)))
 end
 
 --- @param str string The string that will be formatted.
@@ -84,7 +84,7 @@ end
 function logger:warn_server(str, ...)
     if not self.MOD_ID then return end
 
-    print(("[%s/server] [WARN] %s"):format(self.MOD_ID, str:format(...)))
+    print(("[WARN] [%s/server] %s"):format(self.MOD_ID, str:format(...)))
 end
 
 --- @param str string The string that will be formatted.
@@ -92,7 +92,7 @@ end
 function logger:error(str, ...)
     if not self.MOD_ID then return end
 
-    error(("[%s] [ERROR] %s"):format(self.MOD_ID, str:format(...)), 1)
+    error(("[ERROR] [%s] %s"):format(self.MOD_ID, str:format(...)), 1)
 end
 
 --- @param str string The string that will be formatted.
@@ -100,7 +100,7 @@ end
 function logger:error_shared(str, ...)
     if not self.MOD_ID then return end
 
-    error(("[%s/shared] [ERROR] %s"):format(self.MOD_ID, str:format(...)), 1)
+    error(("[ERROR] [%s/shared] %s"):format(self.MOD_ID, str:format(...)), 1)
 end
 
 --- @param str string The string that will be formatted.
@@ -108,7 +108,7 @@ end
 function logger:error_server(str, ...)
     if not self.MOD_ID then return end
 
-    error(("[%s/server] [ERROR] %s"):format(self.MOD_ID, str:format(...)), 1)
+    error(("[ERROR] [%s/server] %s"):format(self.MOD_ID, str:format(...)), 1)
 end
 
 --- @param mod_id string
