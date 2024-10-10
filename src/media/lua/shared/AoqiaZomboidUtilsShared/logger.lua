@@ -5,6 +5,11 @@
 -- AoqiaZomboidUtils requires.
 local constants = require("AoqiaZomboidUtilsShared/constants")
 
+local os = os
+local writeLog = writeLog
+
+local os_date = os.date
+
 -- ------------------------------ Module Start ------------------------------ --
 
 --- @class (exact) logger
@@ -15,102 +20,175 @@ local logger = { MOD_ID = "AoqiaBaseLogger" }
 --- @param str string The string that will be formatted.
 --- @param ... any
 function logger:debug(str, ...)
-    if not self.MOD_ID then return end
+    if self.MOD_ID == nil then return end
     if constants.IS_DEBUG == false then return end
 
-    print(("[DEBUG] [%s] %s"):format(self.MOD_ID, str:format(...)))
+    local fmt = ("[%s] [DEBUG] [%s] %s"):format(
+        os_date("%Y-%m-%d %H:%M:%S"),
+        self.MOD_ID,
+        str:format(...))
+
+    print(fmt)
+    writeLog(self.MOD_ID, fmt)
 end
 
 --- @param str string The string that will be formatted.
 --- @param ... any
 function logger:debug_shared(str, ...)
-    if not self.MOD_ID then return end
+    if self.MOD_ID == nil then return end
     if constants.IS_DEBUG == false then return end
 
-    print(("[DEBUG] [%s/shared] %s"):format(self.MOD_ID, str:format(...)))
+    local fmt = ("[%s] [DEBUG] [%s/shared] %s"):format(
+        os_date("%Y-%m-%d %H:%M:%S"),
+        self.MOD_ID,
+        str:format(...))
+
+    print(fmt)
+    writeLog(self.MOD_ID, fmt)
 end
 
 --- @param str string The string that will be formatted.
 --- @param ... any
 function logger:debug_server(str, ...)
-    if not self.MOD_ID then return end
+    if self.MOD_ID == nil then return end
     if constants.IS_DEBUG == false then return end
 
-    print(("[DEBUG] [%s/server] %s"):format(self.MOD_ID, str:format(...)))
+    local fmt = ("[%s] [DEBUG] [%s/server] %s"):format(
+        os_date("%Y-%m-%d %H:%M:%S"),
+        self.MOD_ID,
+        str:format(...))
+
+    print(fmt)
+    writeLog(self.MOD_ID, fmt)
 end
 
 --- @param str string The string that will be formatted.
 --- @param ... any
 function logger:info(str, ...)
-    if not self.MOD_ID then return end
+    if self.MOD_ID == nil then return end
 
-    print(("[INFO] [%s] %s"):format(self.MOD_ID, str:format(...)))
+    local fmt = ("[%s] [INFO] [%s] %s"):format(
+        os_date("%Y-%m-%d %H:%M:%S"),
+        self.MOD_ID,
+        str:format(...))
+
+    print(fmt)
+    writeLog(self.MOD_ID, fmt)
 end
 
 --- @param str string The string that will be formatted.
 --- @param ... any
 function logger:info_shared(str, ...)
-    if not self.MOD_ID then return end
+    if self.MOD_ID == nil then return end
 
-    print(("[INFO] [%s/shared] %s"):format(self.MOD_ID, str:format(...)))
+    local fmt = ("[%s] [INFO] [%s/shared] %s"):format(
+        os_date("%Y-%m-%d %H:%M:%S"),
+        self.MOD_ID,
+        str:format(...))
+
+    print(fmt)
+    writeLog(self.MOD_ID, fmt)
 end
 
 --- @param str string The string that will be formatted.
 --- @param ... any
 function logger:info_server(str, ...)
-    if not self.MOD_ID then return end
+    if self.MOD_ID == nil then return end
 
-    print(("[INFO] [%s/server] %s"):format(self.MOD_ID, str:format(...)))
+    local fmt = ("[%s] [INFO] [%s/server] %s"):format(
+        os_date("%Y-%m-%d %H:%M:%S"),
+        self.MOD_ID,
+        str:format(...))
+
+    print(fmt)
+    writeLog(self.MOD_ID, fmt)
 end
 
 --- @param str string The string that will be formatted.
 --- @param ... any
 function logger:warn(str, ...)
-    if not self.MOD_ID then return end
+    if self.MOD_ID == nil then return end
 
-    print(("[WARN] [%s] %s"):format(self.MOD_ID, str:format(...)))
+    local fmt = ("[%s] [WARN] [%s] %s"):format(
+        os_date("%Y-%m-%d %H:%M:%S"),
+        self.MOD_ID,
+        str:format(...))
+
+    print(fmt)
+    writeLog(self.MOD_ID, fmt)
 end
 
 --- @param str string The string that will be formatted.
 --- @param ... any
 function logger:warn_shared(str, ...)
-    if not self.MOD_ID then return end
+    if self.MOD_ID == nil then return end
 
-    print(("[WARN] [%s/shared] %s"):format(self.MOD_ID, str:format(...)))
+    local fmt = ("[%s] [WARN] [%s/shared] %s"):format(
+        os_date("%Y-%m-%d %H:%M:%S"),
+        self.MOD_ID,
+        str:format(...))
+
+    print(fmt)
+    writeLog(self.MOD_ID, fmt)
 end
 
 --- @param str string The string that will be formatted.
 --- @param ... any
 function logger:warn_server(str, ...)
-    if not self.MOD_ID then return end
+    if self.MOD_ID == nil then return end
 
-    print(("[WARN] [%s/server] %s"):format(self.MOD_ID, str:format(...)))
+    local fmt = ("[%s] [WARN] [%s/server] %s"):format(
+        os_date("%Y-%m-%d %H:%M:%S"),
+        self.MOD_ID,
+        str:format(...))
+
+    print(fmt)
+    writeLog(self.MOD_ID, fmt)
 end
 
 --- @param str string The string that will be formatted.
 --- @param ... any
 function logger:error(str, ...)
-    if not self.MOD_ID then return end
+    if self.MOD_ID == nil then return end
 
-    error(("[ERROR] [%s] %s"):format(self.MOD_ID, str:format(...)), 1)
+    local fmt = ("[%s] [ERROR] [%s] %s"):format(
+        os_date("%Y-%m-%d %H:%M:%S"),
+        self.MOD_ID,
+        str:format(...))
+
+    error(fmt, 1)
+    writeLog(self.MOD_ID, fmt)
 end
 
 --- @param str string The string that will be formatted.
 --- @param ... any
 function logger:error_shared(str, ...)
-    if not self.MOD_ID then return end
+    if self.MOD_ID == nil then return end
 
-    error(("[ERROR] [%s/shared] %s"):format(self.MOD_ID, str:format(...)), 1)
+    local fmt = ("[%s] [ERROR] [%s/shared] %s"):format(
+        os_date("%Y-%m-%d %H:%M:%S"),
+        self.MOD_ID,
+        str:format(...))
+
+    error(fmt, 1)
+    writeLog(self.MOD_ID, fmt)
 end
 
 --- @param str string The string that will be formatted.
 --- @param ... any
 function logger:error_server(str, ...)
-    if not self.MOD_ID then return end
+    if self.MOD_ID == nil then return end
 
-    error(("[ERROR] [%s/server] %s"):format(self.MOD_ID, str:format(...)), 1)
+    local fmt = ("[%s] [ERROR] [%s/server] %s"):format(
+        os_date("%Y-%m-%d %H:%M:%S"),
+        self.MOD_ID,
+        str:format(...))
+
+    error(fmt, 1)
+    writeLog(self.MOD_ID, fmt)
 end
 
+--- Creates a new logger instance.
 --- @param mod_id string
 --- @return logger
 function logger:new(mod_id)
@@ -120,7 +198,6 @@ function logger:new(mod_id)
 
     self.__index = self
     o.MOD_ID = mod_id
-
     return o
 end
 
