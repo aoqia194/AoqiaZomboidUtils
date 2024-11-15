@@ -21,14 +21,16 @@ local logger = { MOD_ID = "AoqiaBaseLogger" }
 --- @param ... any
 function logger:debug(str, ...)
     if self.MOD_ID == nil then return end
-    if constants.IS_DEBUG == false then return end
 
     local fmt = ("[%s] [DEBUG] [%s] %s"):format(
         os_date("%Y-%m-%d %H:%M:%S"),
         self.MOD_ID,
         str:format(...))
 
-    print(fmt)
+    if constants.IS_DEBUG then
+        print(fmt)
+    end
+
     writeLog(self.MOD_ID, fmt)
 end
 
@@ -36,14 +38,16 @@ end
 --- @param ... any
 function logger:debug_shared(str, ...)
     if self.MOD_ID == nil then return end
-    if constants.IS_DEBUG == false then return end
 
     local fmt = ("[%s] [DEBUG] [%s/shared] %s"):format(
         os_date("%Y-%m-%d %H:%M:%S"),
         self.MOD_ID,
         str:format(...))
 
-    print(fmt)
+    if constants.IS_DEBUG then
+        print(fmt)
+    end
+
     writeLog(self.MOD_ID, fmt)
 end
 
@@ -51,14 +55,16 @@ end
 --- @param ... any
 function logger:debug_server(str, ...)
     if self.MOD_ID == nil then return end
-    if constants.IS_DEBUG == false then return end
 
     local fmt = ("[%s] [DEBUG] [%s/server] %s"):format(
         os_date("%Y-%m-%d %H:%M:%S"),
         self.MOD_ID,
         str:format(...))
 
-    print(fmt)
+    if constants.IS_DEBUG then
+        print(fmt)
+    end
+
     writeLog(self.MOD_ID, fmt)
 end
 
