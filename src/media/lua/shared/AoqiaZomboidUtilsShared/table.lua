@@ -61,4 +61,19 @@ function table.deep_iterate(tbl, predicate)
     end
 end
 
+--- Initialises mod data for the object.
+--- @param obj any
+--- @param modid string
+--- @returns table | nil The mod data table.
+function table.init_mdata(obj, modid)
+    assert(obj, "obj cannot be nil")
+    assert(obj.getModData, "obj does not have getModData()")
+
+    local mdata = obj:getModData()
+    if (mdata[modid] == nil) then
+        mdata[modid] = {}
+    end
+    return mdata[modid]
+end
+
 return table
