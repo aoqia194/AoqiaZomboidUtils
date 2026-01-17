@@ -13,7 +13,6 @@ local os_date = os.date
 -- ------------------------------ Module Start ------------------------------ --
 
 --- @class (exact) logger
---- @field __index self
 --- @field private MOD_ID string
 local logger = { MOD_ID = "AoqiaBaseLogger" }
 
