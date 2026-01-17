@@ -1,7 +1,8 @@
 name=aoqia's zomboid utils
 id=AoqiaZomboidUtils
+author=aoqia
 description=Contains some utilities for my other mods. Useful to keep a clean codebase.
-poster=poster.png
-versionMin=41.78.16
-modVersion=1.6.0
+poster=media/poster.png
+versionMin=42.13.0
+modversion=1.7.0
 url=https://github.com/aoqia194/AoqiaZomboidUtils/
