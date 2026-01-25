@@ -5,7 +5,7 @@ local print = print
 local setmetatable = setmetatable
 local writeLog = writeLog
 
-local constants = require("AoqiaZomboidUtilsShared/constants")
+local constants = require("AoqiaZomboidUtils/shared/constants")
 
 --- @class (exact) logger
 --- @field private MOD_ID string
