@@ -1,16 +1,9 @@
--- -------------------------------------------------------------------------- --
---                           A small logging module                           --
--- -------------------------------------------------------------------------- --
-
--- AoqiaZomboidUtils requires.
-local constants = require("AoqiaZomboidUtilsShared/constants")
-
 local os = os
 local writeLog = writeLog
 
 local os_date = os.date
 
--- ------------------------------ Module Start ------------------------------ --
+local constants = require("AoqiaZomboidUtilsShared/constants")
 
 --- @class (exact) logger
 --- @field private MOD_ID string
