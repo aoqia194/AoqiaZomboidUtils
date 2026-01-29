@@ -70,7 +70,7 @@ end
 --- Initialises mod data for the object.
 --- @param obj IsoObject | any
 --- @param modid string
---- @returns table | nil The mod data table.
+--- @return table?
 function table.init_mdata(obj, modid)
     assert(obj, "obj cannot be nil")
     assert(obj.getModData, "obj does not have getModData()")
